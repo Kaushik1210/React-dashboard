@@ -11,7 +11,7 @@ const ECommerce = () => {
   const{currentColor} = useStateContext()
 
   return (
-    <div className='mt-12'>
+    <div className='mt-12s'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
         <div className='bg-white dark:bg-secondary-dark-bg dark:text-gray-200 h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3  bg-cover bg-center bg-no-repeat '>
           <div>

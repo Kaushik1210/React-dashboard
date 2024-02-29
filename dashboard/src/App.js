@@ -8,6 +8,7 @@ import {Navbar,Footer,Sidebar,ThemeSetting} from './components'
 import {Ecommerce,Orders,Calendar,Employees,Line,Stacked,Customers,Pyramid,Kanban,Area,Bar,Pie,Financial,ColorPicker,ColorMapping,Editor} from './pages'
 
 import { useStateContext } from './context/ContextProvider'
+import Home from './pages/Home'
 
 const App = () => {
 
@@ -17,7 +18,7 @@ const App = () => {
 
 
   return (
-    <div className={currentMode === 'Dark'?'dark': ''}>
+    <div className={currentMode === 'Dark'?'dark': ''}>      
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
           <div className='fixed right-4 bottom-4'
@@ -50,12 +51,12 @@ const App = () => {
           
           <div>
 
-              {themeSetting && <ThemeSetting />}
+              {themeSetting && (<ThemeSetting />)}
 
             <Routes>
               {/* dashboard */}
-              <Route path='/' element={<Ecommerce />}/>
-              <Route path='/ecommerce' element={<Ecommerce />}/>
+              <Route path="*" element={(<Ecommerce/>)}/>
+              <Route path='/ecommerce' element={(<Ecommerce />)}/>
 
               {/* pages */}
               <Route path='/orders' element={<Orders />}/>
